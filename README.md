@@ -58,7 +58,7 @@ The deployment ensures:
 - Pickle
 
 ---
-
+```
 ## Repository Structure
 
 CUSTOMER_CHURN_PREDICTION/
@@ -74,7 +74,7 @@ CUSTOMER_CHURN_PREDICTION/
 ├── requirements.txt
 └── runtime.txt
 
-
+```
 ---
 
 ## Key Highlights
