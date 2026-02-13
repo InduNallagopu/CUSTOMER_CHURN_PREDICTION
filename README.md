@@ -2,7 +2,8 @@
 
 ## 🌐 Live Demo
 
-[![Live Demo](https://img.shields.io/badge/Streamlit-Live_App-red?style=for-the-badge&logo=streamlit)](https://customerchurnprediction-ere652kv93imuew98bnff.streamlit.app)
+[![Live Demo](https://img.shields.io/badge/Streamlit-Live_App-red?style=for-the-badge&logo=streamlit)](https://customerchurnprediction-ere652kv93imuewg89bnff.streamlit.app)
+
 
 
 ## Overview
