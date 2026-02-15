@@ -1,8 +1,9 @@
 streamlit
 tensorflow==2.15.0
-keras==2.15.0
 scikit-learn
 pandas
 numpy
 protobuf==3.20.3
+
+
 
