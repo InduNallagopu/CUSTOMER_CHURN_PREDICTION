@@ -36,7 +36,7 @@ st.write("Predict whether a customer is likely to churn based on input details."
 st.divider()
 
 
-
+from tensorflow.keras.models import load_model
 # Now load model
 model = load_model('model.h5', compile=False)
 
