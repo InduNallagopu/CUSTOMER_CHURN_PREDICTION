@@ -35,8 +35,26 @@ st.write("Predict whether a customer is likely to churn based on input details."
 
 st.divider()
 
-#load the trained model
-model=tf.keras.models.load_model('model.h5',compile=False)
+import tensorflow as tf
+from tensorflow.keras.models import load_model
+
+# This function tells Keras: "If you see 'batch_shape', just pretend it's 'batch_input_shape'"
+def fix_model_loading():
+    original_input_layer_from_config = tf.keras.layers.InputLayer.from_config
+
+    def new_from_config(cls, config):
+        if 'batch_shape' in config:
+            config['batch_input_shape'] = config.pop('batch_shape')
+        return original_input_layer_from_config(config)
+
+    tf.keras.layers.InputLayer.from_config = classmethod(new_from_config)
+
+# Run the fix BEFORE loading the model
+fix_model_loading()
+
+# Now load model
+model = load_model('model.h5', compile=False)
+
 
 #load encoders and scaler
 with open('label_encoder_gender.pkl','rb') as file:
